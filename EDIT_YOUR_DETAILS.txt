@@ -1,0 +1,154 @@
+╔═══════════════════════════════════════════════════════════════════════╗
+║                                                                       ║
+║              ✏️  EDIT YOUR LANDING PAGE DETAILS ✏️                    ║
+║                                                                       ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+┌───────────────────────────────────────────────────────────────────────┐
+│  📁 FILE TO EDIT                                                      │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  Open this file:  public/landing.html                                │
+│                                                                       │
+│  You can use:                                                         │
+│  • Notepad                                                            │
+│  • VS Code                                                            │
+│  • Any text editor                                                    │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────────────────────────────┐
+│  ✏️  WHAT TO CHANGE                                                   │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  1. YOUR NAME                                                         │
+│     Find: id="developer-name"                                         │
+│     Change: "Your Name Here" → "Your Actual Name"                    │
+│                                                                       │
+│  2. COLLEGE/UNIVERSITY                                                │
+│     Find: id="college-name"                                           │
+│     Change: "Your College Name" → "Your College"                     │
+│                                                                       │
+│  3. COURSE                                                            │
+│     Find: id="course-name"                                            │
+│     Change: "Your Course" → "Your Course Name"                       │
+│                                                                       │
+│  4. YEAR                                                              │
+│     Find: id="year"                                                   │
+│     Change: "2024" → "Your Year"                                     │
+│                                                                       │
+│  5. EMAIL                                                             │
+│     Find: id="email"                                                  │
+│     Change: "your.email@example.com" → "Your Email"                  │
+│                                                                       │
+│  6. PROJECT DESCRIPTION (Optional)                                    │
+│     Find: id="project-description"                                    │
+│     Change the paragraph text                                         │
+│                                                                       │
+│  7. ADDITIONAL INFO (Optional)                                        │
+│     Find: id="additional-info"                                        │
+│     Change the paragraph text                                         │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────────────────────────────┐
+│  📝 EXAMPLE EDIT                                                      │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  BEFORE:                                                              │
+│  <span class="value" id="developer-name">Your Name Here</span>       │
+│                                                                       │
+│  AFTER:                                                               │
+│  <span class="value" id="developer-name">Rahul Sharma</span>         │
+│                                                                       │
+│  ─────────────────────────────────────────────────────────────────   │
+│                                                                       │
+│  BEFORE:                                                              │
+│  <span class="value" id="college-name">Your College Name</span>      │
+│                                                                       │
+│  AFTER:                                                               │
+│  <span class="value" id="college-name">MIT College</span>            │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────────────────────────────┐
+│  🚀 HOW TO SEE YOUR CHANGES                                           │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  Step 1: Edit public/landing.html                                    │
+│  Step 2: Save the file                                               │
+│  Step 3: Refresh browser (F5)                                        │
+│                                                                       │
+│  That's it! Your changes will appear immediately!                    │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────────────────────────────┐
+│  🌐 YOUR NEW URLS                                                     │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  Landing Page (with your details):                                   │
+│  http://localhost:5000                                                │
+│                                                                       │
+│  Diary Application:                                                  │
+│  http://localhost:5000/diary                                          │
+│                                                                       │
+│  The landing page has a button to launch the diary!                  │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────────────────────────────┐
+│  ✨ WHAT YOUR LANDING PAGE SHOWS                                      │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  ✓ Beautiful gradient header                                         │
+│  ✓ Project title and icon                                            │
+│  ✓ Your personal information                                         │
+│  ✓ Project description                                               │
+│  ✓ Key features with icons                                           │
+│  ✓ Technologies used                                                 │
+│  ✓ Additional information                                            │
+│  ✓ "Launch Diary" button                                             │
+│  ✓ Professional footer                                               │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+
+╔═══════════════════════════════════════════════════════════════════════╗
+║                                                                       ║
+║  📋 QUICK COPY-PASTE TEMPLATE                                         ║
+║                                                                       ║
+║  Replace these in public/landing.html:                                ║
+║                                                                       ║
+║  Your Name Here          → Your Actual Name                           ║
+║  Your College Name       → Your College                               ║
+║  Your Course             → Your Course                                ║
+║  2024                    → Your Year                                  ║
+║  your.email@example.com  → Your Email                                 ║
+║                                                                       ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════════════╗
+║                                                                       ║
+║  💡 PRO TIP                                                           ║
+║                                                                       ║
+║  Use Ctrl+F (Find) in your text editor to quickly locate:            ║
+║  • id="developer-name"                                                ║
+║  • id="college-name"                                                  ║
+║  • id="course-name"                                                   ║
+║  • id="year"                                                          ║
+║  • id="email"                                                         ║
+║                                                                       ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════════════╗
+║                                                                       ║
+║  ✅ DONE!                                                             ║
+║                                                                       ║
+║  After editing, your project will have:                               ║
+║  • Professional landing page with YOUR details                        ║
+║  • Easy navigation to the diary app                                   ║
+║  • Portfolio-ready presentation                                       ║
+║                                                                       ║
+║  Perfect for showing to professors, recruiters, or clients!           ║
+║                                                                       ║
+╚═══════════════════════════════════════════════════════════════════════╝

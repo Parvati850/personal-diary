@@ -1,0 +1,26 @@
+
+{
+  "name": "personal-diary-api",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.mjs",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "nodemon server.mjs"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^7.8.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "description": "A secure full-stack application where users can store private diary entries with end-to-end encryption.",
+  "keywords": ["diary", "encryption", "secure", "notes", "jwt", "mongodb"],
+  "author": "Parvati Hiregoudra & Monika M",
+  "license": "MIT"
+}

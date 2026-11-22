@@ -1,0 +1,173 @@
+╔═══════════════════════════════════════════════════════════════════════╗
+║                                                                       ║
+║           PERSONAL DIARY API - QUICK REFERENCE CARD                   ║
+║                                                                       ║
+╚═══════════════════════════════════════════════════════════════════════╝
+
+┌───────────────────────────────────────────────────────────────────────┐
+│  🚀 GETTING STARTED (3 STEPS)                                         │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  1. Install Dependencies:                                             │
+│     npm install                                                       │
+│                                                                       │
+│  2. Start Server:                                                     │
+│     npm start                                                         │
+│                                                                       │
+│  3. Open Browser:                                                     │
+│     http://localhost:5000                                             │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────────────────────────────┐
+│  📚 DOCUMENTATION FILES                                               │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  START_HERE.md ........... Quick start guide (READ THIS FIRST!)      │
+│  SETUP_GUIDE.md .......... Complete setup instructions               │
+│  CHECKLIST.md ............ Verification checklist                    │
+│  COMMANDS.md ............. Command reference                         │
+│  HOW_IT_WORKS.md ......... Architecture & security explained         │
+│  README.md ............... Full project documentation                │
+│  QUICKSTART.md ........... 5-minute setup guide                      │
+│  FINAL_SUMMARY.md ........ Project summary                           │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────────────────────────────┐
+│  ⚡ COMMON COMMANDS                                                   │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  Start server:              npm start                                 │
+│  Start with auto-restart:   npm run dev                              │
+│  Stop server:               Ctrl + C                                  │
+│  Install dependencies:      npm install                               │
+│  Test API:                  .\test-api.ps1                           │
+│  Check if running:          netstat -ano | findstr :5000            │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────────────────────────────┐
+│  🌐 URLS                                                              │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  Frontend:        http://localhost:5000                               │
+│  API Base:        http://localhost:5000/api                           │
+│  Register:        http://localhost:5000/api/auth/register             │
+│  Login:           http://localhost:5000/api/auth/login                │
+│  Entries:         http://localhost:5000/api/entries                   │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────────────────────────────┐
+│  🔧 TROUBLESHOOTING                                                   │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  Problem                          Solution                            │
+│  ─────────────────────────────────────────────────────────────────   │
+│  Server won't start               Run: npm install                    │
+│  Port already in use              Change PORT in .env                 │
+│  Module not found                 Run: npm install                    │
+│  Can't connect to database        Check MONGO_URI in .env             │
+│  Frontend not loading             Verify server is running            │
+│  Login fails                      Check JWT_SECRET in .env            │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────────────────────────────┐
+│  ✅ SUCCESS INDICATORS                                                │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  ✓ Terminal shows: "MongoDB Connected"                               │
+│  ✓ Terminal shows: "Server running on port 5000"                     │
+│  ✓ Browser loads login page                                          │
+│  ✓ Can register new user                                             │
+│  ✓ Can login successfully                                            │
+│  ✓ Can create diary entries                                          │
+│  ✓ Can view and edit entries                                         │
+│  ✓ Search and filter work                                            │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────────────────────────────┐
+│  📁 PROJECT STRUCTURE                                                 │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  server.mjs ................. Main entry point                        │
+│  app.mjs .................... Express app setup                       │
+│  .env ....................... Configuration                           │
+│  package.json ............... Dependencies                            │
+│                                                                       │
+│  config/ .................... Database connection                     │
+│  controllers/ ............... Business logic                          │
+│  models/ .................... Database schemas                        │
+│  routes/ .................... API endpoints                           │
+│  middleware/ ................ Authentication                          │
+│  utils/ ..................... Encryption functions                    │
+│  public/ .................... Frontend files                          │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────────────────────────────┐
+│  🔐 SECURITY FEATURES                                                 │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  ✓ Password hashing (bcrypt)                                         │
+│  ✓ JWT authentication                                                │
+│  ✓ AES-256-GCM encryption                                            │
+│  ✓ Per-user encryption keys                                          │
+│  ✓ Master key protection                                             │
+│  ✓ Authorization checks                                              │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────────────────────────────┐
+│  🎯 FEATURES                                                          │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  ✓ User registration & login                                         │
+│  ✓ Create diary entries                                              │
+│  ✓ View entries (decrypted)                                          │
+│  ✓ Edit entries                                                      │
+│  ✓ Delete entries                                                    │
+│  ✓ Search by tags                                                    │
+│  ✓ Filter by date range                                              │
+│  ✓ Responsive UI                                                     │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────────────────────────────┐
+│  💡 TIPS                                                              │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  • Use "npm run dev" for development (auto-restart)                  │
+│  • Keep terminal open while using the app                            │
+│  • Check terminal for error messages                                 │
+│  • Use F12 in browser to see console logs                            │
+│  • Read START_HERE.md for detailed instructions                      │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+
+┌───────────────────────────────────────────────────────────────────────┐
+│  📊 PROJECT STATS                                                     │
+├───────────────────────────────────────────────────────────────────────┤
+│                                                                       │
+│  Total Files: ............... 25+                                     │
+│  Lines of Code: ............. 1,500+                                  │
+│  Technologies: .............. 7+                                      │
+│  Security Layers: ........... 4                                       │
+│  API Endpoints: ............. 7                                       │
+│  Documentation Pages: ....... 8                                       │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+
+╔═══════════════════════════════════════════════════════════════════════╗
+║                                                                       ║
+║  🚀 READY TO RUN!                                                     ║
+║                                                                       ║
+║  Just type:  npm start                                                ║
+║  Then open:  http://localhost:5000                                    ║
+║                                                                       ║
+║  Need help? Read START_HERE.md                                        ║
+║                                                                       ║
+╚═══════════════════════════════════════════════════════════════════════╝

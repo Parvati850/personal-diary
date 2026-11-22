@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Diary - Encrypted Notes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Auth Screen -->
+  <div id="auth-screen" class="screen">
+    <div class="auth-container">
+      <h1>🔒 Personal Diary</h1>
+      <p class="subtitle">Secure Encrypted Notes Application</p>
+
+      <div class="auth-tabs">
+        <button class="tab active" data-tab="login">Login</button>
+        <button class="tab" data-tab="register">Register</button>
+      </div>
+
+      <!-- Login Form -->
+      <form id="login-form" class="auth-form">
+        <input type="email" id="login-email" placeholder="Email address" required>
+        <input type="password" id="login-password" placeholder="Password" required>
+        <button type="submit">Login to Diary</button>
+      </form>
+
+      <!-- Register Form -->
+      <form id="register-form" class="auth-form hidden">
+        <input type="email" id="register-email" placeholder="Email address" required>
+        <input type="password" id="register-password" placeholder="Password (min 6 characters)" required>
+        <button type="submit">Create Account</button>
+      </form>
+
+      <div id="auth-error" class="error"></div>
+    </div>
+  </div>
+
+  <!-- Diary Screen -->
+  <div id="diary-screen" class="screen hidden">
+    <header>
+      <h1>🔒 Personal Diary</h1>
+      <button id="logout-btn" class="btn-secondary">Logout</button>
+    </header>
+
+    <div class="main-content">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <button id="new-entry-btn" class="btn-primary">+ New Entry</button>
+
+        <div class="search-section">
+          <h3>Search & Filter</h3>
+          <input type="text" id="search-tag" placeholder="Search by tag...">
+          
+          <select id="filter-category">
+            <option value="">All Categories</option>
+            <option value="personal">📝 Personal</option>
+            <option value="work">💼 Work</option>
+            <option value="travel">✈️ Travel</option>
+            <option value="health">💪 Health</option>
+            <option value="goals">🎯 Goals</option>
+            <option value="gratitude">🙏 Gratitude</option>
+          </select>
+
+          <select id="filter-mood">
+            <option value="">All Moods</option>
+            <option value="happy">😊 Happy</option>
+            <option value="sad">😢 Sad</option>
+            <option value="excited">🤩 Excited</option>
+            <option value="anxious">😰 Anxious</option>
+            <option value="neutral">😐 Neutral</option>
+          </select>
+
+          <input type="date" id="search-start" title="Start date">
+          <input type="date" id="search-end" title="End date">
+
+          <div class="filter-group">
+            <button id="filter-favorites" type="button" data-active="false">⭐ Favorites Only</button>
+          </div>
+
+          <button id="search-btn" class="btn-primary">Apply Filters</button>
+          <button id="clear-search-btn" class="btn-secondary">Clear All</button>
+        </div>
+
+        <div class="entries-list">
+          <h3>My Entries</h3>
+          <div id="entries-container"></div>
+        </div>
+      </div>
+
+      <!-- Main Content Area -->
+      <div class="content">
+        <!-- Empty State -->
+        <div id="empty-state" class="empty-state">
+          <div class="empty-state-icon">📖</div>
+          <p>Select an entry from the list or create a new one</p>
+        </div>
+
+        <!-- Entry Editor -->
+        <div id="entry-view" class="entry-view hidden">
+          <div class="entry-header">
+            <input type="text" id="entry-title" placeholder="Entry Title...">
+            <div class="entry-actions">
+              <button id="save-btn" class="btn-primary">Save</button>
+              <button id="delete-btn" class="btn-danger" style="display: none;">Delete</button>
+            </div>
+          </div>
+
+          <div class="entry-controls">
+            <div class="control-group">
+              <label for="entry-tags">Tags (comma separated)</label>
+              <input type="text" id="entry-tags" placeholder="e.g. personal, work, ideas">
+            </div>
+
+            <div class="control-group">
+              <label for="entry-category">Category</label>
+              <select id="entry-category">
+                <option value="personal">📝 Personal</option>
+                <option value="work">💼 Work</option>
+                <option value="travel">✈️ Travel</option>
+                <option value="health">💪 Health</option>
+                <option value="goals">🎯 Goals</option>
+                <option value="gratitude">🙏 Gratitude</option>
+              </select>
+            </div>
+
+            <div class="control-group">
+              <label for="entry-mood">Mood</label>
+              <select id="entry-mood">
+                <option value="happy">😊 Happy</option>
+                <option value="sad">😢 Sad</option>
+                <option value="excited">🤩 Excited</option>
+                <option value="anxious">😰 Anxious</option>
+                <option value="neutral">😐 Neutral</option>
+              </select>
+            </div>
+
+            <div class="control-group">
+              <label>Theme Color</label>
+              <div class="color-picker-group">
+                <input type="color" id="entry-color" value="#667eea">
+                <div class="color-presets">
+                  <div class="color-preset" data-color="#667eea" style="background: #667eea;" title="Purple"></div>
+                  <div class="color-preset" data-color="#10b981" style="background: #10b981;" title="Green"></div>
+                  <div class="color-preset" data-color="#f97316" style="background: #f97316;" title="Orange"></div>
+                  <div class="color-preset" data-color="#ef4444" style="background: #ef4444;" title="Red"></div>
+                  <div class="color-preset" data-color="#8b5cf6" style="background: #8b5cf6;" title="Violet"></div>
+                  <div class="color-preset" data-color="#ec4899" style="background: #ec4899;" title="Pink"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="control-group">
+              <div class="favorite-toggle" id="favorite-toggle">
+                <input type="checkbox" id="entry-favorite">
+                <label for="entry-favorite">⭐ Mark as Favorite</label>
+              </div>
+            </div>
+          </div>
+
+          <textarea id="entry-text" placeholder="Write your diary entry here..."></textarea>
+
+          <div class="entry-meta">
+            <span id="entry-date"></span>
+            <span id="entry-updated"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
